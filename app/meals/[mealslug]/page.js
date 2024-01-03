@@ -2,8 +2,13 @@ import React from 'react';
 import classes from './page.module.css';
 import Image from 'next/image';
 import { getMeal } from '@/lib/meals';
+import { notFound } from 'next/navigation';
+
 const MealDetailsPage = ({ params }) => {
     const meal = getMeal(params.mealslug);
+    if (!meal) {
+        notFound();
+    }
     /*
     /\n/g  :It is a regular expression , which matches all the \n
       */
