@@ -40,7 +40,6 @@ const ImagePicker = ({ label, name }) => {
                     name={name}
                     ref={imageInput}
                     onChange={handleImageChange}
-                    required
                 />
                 {/* handle input */}
                 <button className={classes.button} type='button' onClick={handlePickClick}>
